@@ -16,7 +16,7 @@ export function useMovies(query) {
           setError("");
           const res = await fetch(
             `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
-            { signal: controller.signal, referrerPolicy: "unsafe-url" }
+            { signal: controller.signal }
           );
           if (!res.ok)
             throw new Error("some thing went worng with fetching movies");
