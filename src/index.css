@@ -76,6 +76,7 @@ body {
 
 .logo {
   display: flex;
+  grid-area: logo;
   align-items: center;
   gap: 0.8rem;
 }
@@ -92,6 +93,7 @@ body {
 
 .search {
   justify-self: center;
+  grid-area: search;
   border: none;
   padding: 1.1rem 1.6rem;
   font-size: 1.8rem;
@@ -115,6 +117,7 @@ body {
 }
 
 .num-results {
+  grid-area: num-results;
   justify-self: end;
   font-size: 1.8rem;
 }
@@ -337,6 +340,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    grid-template-areas: "logo logo" "search num-results";
+    height: 11.2rem;
+  }
+  .logo {
+    width: 300px;
+    justify-content: center;
+  }
+  .search {
+    width: 150px;
+  }
+  .main {
+    height: 100vh;
+    flex-wrap: wrap;
+  }
 }
 
 /*
