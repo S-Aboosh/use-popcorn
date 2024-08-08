@@ -76,7 +76,6 @@ body {
 
 .logo {
   display: flex;
-  grid-area: logo;
   align-items: center;
   gap: 0.8rem;
 }
@@ -93,7 +92,6 @@ body {
 
 .search {
   justify-self: center;
-  grid-area: search;
   border: none;
   padding: 1.1rem 1.6rem;
   font-size: 1.8rem;
@@ -117,7 +115,6 @@ body {
 }
 
 .num-results {
-  grid-area: num-results;
   justify-self: end;
   font-size: 1.8rem;
 }
@@ -350,9 +347,14 @@ body {
   .logo {
     width: 300px;
     justify-content: center;
+    grid-area: logo;
   }
   .search {
     width: 150px;
+    grid-area: search;
+  }
+  .num-results {
+    grid-area: num-results;
   }
   .main {
     height: 100vh;
